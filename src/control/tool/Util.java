@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import javax.swing.ImageIcon;
-import javax.swing.tree.DefaultMutableTreeNode;
+import model.SortedTreeNode;
 
 /**
  *
@@ -37,12 +37,12 @@ public class Util {
         return imageIcon;
     }
 
-    public static DefaultMutableTreeNode addTreeNodes(DefaultMutableTreeNode curTop, File dir) {
+    public static SortedTreeNode addTreeNodes(SortedTreeNode curTop, File dir) {
         if (!dir.exists())
             return null;
 
         String curPath = dir.getPath();
-        DefaultMutableTreeNode curDir = new DefaultMutableTreeNode(dir.getName());
+        SortedTreeNode curDir = new SortedTreeNode(dir.getName());
 
         if (curTop != null)
             curTop.add(curDir);
@@ -51,7 +51,6 @@ public class Util {
         ArrayList<String> folders = new ArrayList(Arrays.asList(dir.list()));
         ArrayList<String> files = new ArrayList();
 
-        // Make two passes, one for Dirs and one for Files. This is #1.
         for (int i = 0; i < folders.size(); i++) {
             String thisObject = folders.get(i);
             String newPath;
@@ -68,7 +67,7 @@ public class Util {
         }
 
         files.forEach((file) -> {
-            curDir.add(new DefaultMutableTreeNode(file));
+            curDir.add(new SortedTreeNode(file));
         });
 
         return curDir;

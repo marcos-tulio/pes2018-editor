@@ -7,6 +7,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.tree.DefaultTreeModel;
 import control.tool.Util;
+import javax.swing.JProgressBar;
 import model.Config;
 import view.ViewHome;
 
@@ -20,7 +21,7 @@ public final class CtrlHome extends ViewHome {
         initListeners();
 
         // debug
-        //load();
+        load();
     }
 
     private void initListeners() {
@@ -46,13 +47,27 @@ public final class CtrlHome extends ViewHome {
     private void load() {
         rightPanel.initProgress("Loading project...");
 
-        treeOriginal.setModel(new DefaultTreeModel(
-                Util.addTreeNodes(null, new File(Config.PATH_PES)))
-        );
-        //tree.setModel(new DefaultTreeModel(Util.addTreeNodes(null, chooser.getSelectedFile())));
+        // Criando o projeto
+        Project project = new Project();
 
+        // Criar as dependências
+        if (!project.createDependecies(rightPanel.getProgressBar()))
+            return;
+        
+        
+        
+        //treeOriginal.setModel(new DefaultTreeModel(
+        //        Util.addTreeNodes(null, new File(Config.PATH_PES)))
+        //);
+        //tree.setModel(new DefaultTreeModel(Util.addTreeNodes(null, chooser.getSelectedFile())));
         try {
-            Project.create(rightPanel.getProgressBar());
+            // Criar um novo projeto
+            //project.extractCPKS(rightPanel.getProgressBar());
+
+            // Carregar as árvores
+            treeOriginal.setModel(new DefaultTreeModel(project.getTreeOriginal()));
+            treeProject.setModel(new DefaultTreeModel(project.getTreeProject()));
+
         } catch (Exception ex) {
             Logger.showError("Error loading project");
             System.out.println(ex.getMessage());

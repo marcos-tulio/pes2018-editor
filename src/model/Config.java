@@ -12,13 +12,22 @@ import java.io.File;
  */
 public class Config {
 
-    public static String PATH_CPKMAKEC = "E:\\PES_EDIT\\PES_TOOLS\\CRIFILESYSTEM\\cpkmakec.exe";
-    public static String PATH_PES      = "E:\\PS3\\GAMES\\PRO EVOLUTION SOCCER 2018 [BLUS31612]";
-    public static String PATH_PROJECT       = "E:\\PES_PROJECT";
-    public static String PATH_PROJECT_CPKS  = Config.PATH_PROJECT + File.separator + "CPK";
-    public static String PATH_PROJECT_JSON  = Config.PATH_PROJECT + File.separator + "JSON";
+    public static String CPKMAKEC_PATH      = "E:\\PES_EDIT\\PES_TOOLS\\CRIFILESYSTEM\\cpkmakec.exe";
+    public static String PES_PATH           = "E:\\PS3\\GAMES\\PRO EVOLUTION SOCCER 2018 [BLUS31612]";
+    public static String BASE_PATH          = "E:\\MrCapybara";
+    
+    // Projeto selecionado
+    public static String PROJECT_NAME         = "MY PROJECT";
+    public static String PROJECT_PATH         = Config.BASE_PATH + "\\" + Config.PROJECT_NAME;
+    public static String PROJECT_CPKS_FOLDER  = Config.PROJECT_PATH + File.separator + "CPK";
+    public static String PROJECT_JSON_FILES   = Config.PROJECT_PATH + File.separator + "files.json";
+    public static String PROJECT_JSON_CPKS    = Config.PROJECT_PATH + File.separator + "cpks.json";
+    
+    @Deprecated
+    public static String PROJECT_PATH_JSON    = Config.PROJECT_PATH + File.separator + "JSON";
+
         
-    public final static String TITLE = "PES 2018 Editor by MrCapybara";
+    public final static String TITLE        = "PES 2018 Editor by MrCapybara";
 
     public final static Color MOSTLY_WHITE = new Color(250, 250, 250);
     public final static Color LIME_GREEN = new Color(70, 195, 135);
