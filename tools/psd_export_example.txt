@@ -1,0 +1,76 @@
+Name:J9J
+shirt name:888
+Player Styles: Extra FrontmanW
+
+Nationality: xxx
+
+Height: 123
+Weight: 45
+Age: 67
+Foot: L
+Form: 8
+
+Weak Foot Usage: 4
+Weak Foot Accuracy: 2
+Injury Tolerance: 4
+
+Registered Position: LWF
+Playable Positions: GK, RMF
+
+Attacking Prowess: 99
+Ball Control: 98
+Dribbling: 97
+Low Pass: 96
+Lofted Pass: 95
+Finishing: 94
+Place Kicking: 93
+Swerve: 92
+Header: 91
+Defence Prowess: 90
+Ball Winning: 89
+Kicking Power: 88
+Speed: 87
+Explosive Power: 86
+Body Control: 85
+Physical Contact: 84
+Jump: 83
+Stamina: 82
+Goalkeeping: 81
+Catching: 80
+Clearing: 79
+Reflexes: 78
+Coverage: 77
+
+<Player Skills>
+01 - Scissor Feint
+02 - Flip Flap
+03 - Marseille Turn
+04 - Sombrero
+05 - Cut Behind & Turn
+08 - Long Range Drive
+09 - Knuckle Shot
+10 - Acrobatic Finish
+11 - Heel Trick
+12 - First-time Shot
+14 - Weighted Pass
+15 - Pinpoint Crossing
+16 - Outside Curler
+19 - Low Punt Trajectory
+20 - Long Throw
+21 - GK Long Throw
+22 - Malicia
+23 - Man Marking
+24 - Track Back
+26 - Captaincy
+27 - Super-Sub
+28 - Fighting Spirit
+
+<COM Playing Styles>
+01 - Trickster
+02 - Mazing Run
+03 - Speeding Bullet
+04 - Incisive Run
+05 - Long-Ball Expert
+06 - Early Cross
+07 - Long Ranger
+
